@@ -1,1 +1,1 @@
-# fun_with_rosalind
+# Here are some scripts I wrote for rosalind. 
