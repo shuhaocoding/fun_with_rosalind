@@ -1,0 +1,10 @@
+from Bio import SeqIO
+from Bio.Seq import Seq
+
+for fasta in SeqIO.parse(open("rosalind_revp.txt"),'fasta'):
+    seq = str(fasta.seq)
+
+for i in range(4,13):
+    for count, letter in enumerate(seq[:len(seq)-i+1]):
+        if str(Seq(seq[count:count+i]).reverse_complement()) == seq[count:count+i]:
+            print(count+1, i)
